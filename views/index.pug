@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+	.row
+		.col-md-6.col-md-offset-3
+			h4 Collatz Conjecture
+
+	.row
+		.col-md-6.col-md-offset-3
+			form(action='/collatz', method='post')
+				.form-group
+					.row
+						.col-xs-8
+							input.form-control(type='number', name='collatzNumber', placeholder='Digite um número:')
+						.col-xs-4
+							input.btn.btn-default(type='submit', value='enviar')
+				span= collatzRs
+
+			
